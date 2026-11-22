@@ -1,0 +1,33 @@
+.dashboard-grid{display:grid;grid-template-columns:minmax(170px,.88fr) minmax(190px,1fr) minmax(345px,2fr);gap:14px}
+.dashboard-panel.kpis{display:grid;padding:0 14px}
+.metric-row{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line)}
+.metric-row:last-child{border:0}
+.metric-row:hover,.metric-arrow{color:var(--teal)}
+.metric-arrow{margin-left:auto;flex:none}
+.metric-row small{margin:0 0 3px}
+.metric-row strong{font-size:clamp(16px,1.6vw,22px);letter-spacing:-.035em}
+.dashboard-panel .tile-icon{color:#4c48bd}
+.income,.structure{display:grid;justify-items:center;text-align:center;align-content:start}
+.chart-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 13px;list-style:none;padding:0;margin:10px 0 0;color:var(--sub);font-size:12px}
+.chart-legend li{display:inline-flex;align-items:center;gap:5px}
+.chart-legend i{width:8px;height:8px;border-radius:50%}
+.chart-legend strong{color:var(--ink)}
+.salary-units,.performance{grid-column:1 / span 2}
+.performance .table-scroll{margin-top:12px}
+.performance th,.performance td{padding:7px 8px}
+.performance th{background:#f2f2fa}
+@media(max-width:1180px){
+  .dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .salary-bars,.salary-units,.performance{grid-column:1 / -1}
+}
+@media(max-width:720px){.dashboard-grid{grid-template-columns:minmax(0,1fr)}}
+
+.dashboard-chart{width:100%;min-width:0}
+.chart-canvas{position:relative;height:155px;margin-top:10px}
+.salary-units .chart-canvas{height:176px}
+.chart-canvas-ring{height:134px}
+.chart-legend button{display:inline-flex;align-items:center;gap:5px;border:0;background:transparent;padding:4px;color:inherit;text-align:left}
+.chart-legend button[aria-pressed="false"]{opacity:.55;text-decoration:line-through}
+.chart-data{margin-top:8px;color:var(--sub);font-size:12px}
+.chart-data summary{cursor:pointer}
+.chart-data table{margin-top:8px}
